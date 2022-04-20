@@ -53,8 +53,8 @@
   },
   "lint-staged": {
     "*.ts": [
-      "yarn run lint",
-      "yarn run format",
+      "npm run lint",
+      "npm run format",
       "git add ."
     ]
 }
