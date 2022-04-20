@@ -10,12 +10,6 @@ export class TestLComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const a = 1  
-
-     
-
-    
-
-    // console.log(a);
+    const a = 1;
   }
 }
