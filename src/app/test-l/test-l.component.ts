@@ -10,7 +10,7 @@ export class TestLComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const a = 1
+    const a = 1 ;
 
 
     
