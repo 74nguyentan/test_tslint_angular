@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-l.component.css'],
 })
 export class TestLComponent implements OnInit {
+  private abc: string;
   constructor() {}
 
   ngOnInit(): void {
-    const a = 1;
-    console.log(a);
+    const a = 1
+
+
+    
+
+    // console.log(a);
   }
 }

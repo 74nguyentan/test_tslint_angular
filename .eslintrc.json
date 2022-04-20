@@ -4,10 +4,13 @@
   "overrides": [
     {
       "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": ["tsconfig.json", "e2e/tsconfig.json"],
-        "createDefaultProgram": true
+        "createDefaultProgram": true,
+        "sourceType": "module"
       },
+      "plugins": ["@typescript-eslint/eslint-plugin"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
@@ -47,8 +50,8 @@
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-explicit-any": 0,
-        "semi": ["error", "always"], // thêm dấu ; cuối dòng code
-        // "no-unused-vars": ["error", { "vars": "all" }] // báo lỗi ĐỎ nếu có biến k dùng tới
+        "no-unused-vars": ["error", { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới
+        "semi": ["error", "always"] // thêm dấu ; cuối dòng code
       }
     },
     {
