@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestLComponent implements OnInit {
   private abc: string;
-  constructor(private http: abc) {}
+  constructor() {}
 
   ngOnInit(): void {
     const a = 1;
