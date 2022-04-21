@@ -11,5 +11,7 @@ export class TestLComponent implements OnInit {
 
   ngOnInit(): void {
     const a = 1;
+
+    console.log(a);
   }
 }
