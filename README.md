@@ -71,6 +71,90 @@ filename: .eslintrc.json
   ]
 }
 
+filename: .eslintrc.json { tham khảo }
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 12,
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "createDefaultProgram": true
+    },
+      "plugins": [
+        "@typescript-eslint/eslint-plugin",
+        "prettier"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "style": "camelCase"
+          }
+        ],
+       
+        // 0 == "off", 1 == "warn", 2 == "error"
+        "@typescript-eslint/member-ordering": 0, 
+        "@typescript-eslint/naming-convention": 0,
+        "@typescript-eslint/interface-name-prefix": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "prettier/prettier": [ // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ],
+        // "no-unused-vars": ["error", { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới
+        "semi": ["error", "always"] // thêm dấu ; cuối dòng code
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    },
+    {
+      "files": ["*.html"],
+      "excludedFiles": ["*inline-template-*.component.html"],
+      "extends": ["plugin:prettier/recommended"],
+      "rules": {
+        "prettier/prettier": [ // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
+          "error",
+          {
+            "endOfLine": "auto"
+          },
+          { "parser": "angular" }
+        ]
+      }
+    }
+  ]
+}
+
+
 Filename: .prettierrc
 
 {
@@ -116,3 +200,32 @@ Filename angular.json
 "editor.suggest.snippetsPreventQuickSuggestions": false,
 "editor.inlineSuggest.enabled": true
 
+
+======> Tự động hoá với Lint-staged và Husky
+
+yarn add --dev lint-staged
+
+package.json
+"lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "npm run format",
+      "git add ." // có hoặc k vẫn ok
+    ]
+}
+
+yarn add --dev husky
+yarn husky install
+yarn husky add .husky/pre-commit "yarn lint-staged"
+
+file pre-commit
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn lint-staged
+
+file package.json
+"scripts": {
+...
+"postinstall": "husky install"
+}
