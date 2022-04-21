@@ -54,7 +54,7 @@
             "endOfLine": "auto"
           }
         ],
-        "no-unused-vars": ["error", { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới
+        "no-unused-vars": [1, { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới
         "semi": ["error", "always"] // thêm dấu ; cuối dòng code
       }
     },
