@@ -70,7 +70,7 @@
       "yarn lint",
       "yarn format"
     ],
-    "*.scss, *.css": [
+    "*.scss": [
       "yarn stylelint",
       "yarn format"
     ],
