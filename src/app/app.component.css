@@ -1,0 +1,11 @@
+.box-contai {
+  background-color: rebeccapurple;
+
+
+  color: aqua;
+  
+}
+
+p::after {
+  color: rebeccapurple;
+}

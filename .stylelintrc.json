@@ -1,0 +1,20 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": true,
+    "selector-pseudo-element-colon-notation":"double", 
+    "block-closing-brace-newline-after": "always",
+    "property-no-unknown": true,
+    "color-no-invalid-hex": true,
+    "indentation": 2,
+    "rule-empty-line-before":"always",
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true
+  }
+}

@@ -229,3 +229,10 @@ file package.json
 ...
 "postinstall": "husky install"
 }
+
+
+
+---- style lint ----
+yarn add stylelint stylelint-scss
+
+yarn add --dev stylelint-config-standard stylelint-config-standard-scss stylelint-config-prettier stylelint-config-prettier-scss

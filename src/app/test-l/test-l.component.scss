@@ -2,11 +2,15 @@
   background-color: aliceblue;
   height: 500px;
 
+
   width: 200px;
+
+  
 }
 
-.box_d {
+.box_d::after {
   height: 200px;
+
 
   background-color: red;
 }
