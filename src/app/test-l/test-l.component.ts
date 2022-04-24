@@ -12,6 +12,12 @@ export class TestLComponent implements OnInit {
   ngOnInit(): void {
     const a = 1;
 
-    // console.log(a);
+    // Console.log(a);
+    if (isNaN(a)) {
+    }
+  }
+
+  ds(a: string, b: string, c: string) {
+    console.log(a, b, c);
   }
 }

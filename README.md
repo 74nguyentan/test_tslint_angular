@@ -1,7 +1,8 @@
 
 yarn add eslint --dev --dev @typescript-eslint/eslint-plugin // k dùng
+https://eslint.org/docs/rules/
 
-angular lint
+-------> angular lint <-------
 
 Install Angular ESLint
 ng add @angular-eslint/schematics

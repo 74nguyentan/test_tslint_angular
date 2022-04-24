@@ -7,14 +7,43 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "at-rule-no-unknown": true,
-    "selector-pseudo-element-colon-notation":"double", 
+    "selector-pseudo-element-colon-notation": "double",
     "block-closing-brace-newline-after": "always",
+    "block-closing-brace-empty-line-before": "never",
     "property-no-unknown": true,
     "color-no-invalid-hex": true,
     "indentation": 2,
-    "rule-empty-line-before":"always",
-    "scss/dollar-variable-pattern": "^foo",
-    "scss/selector-no-redundant-nesting-selector": true
+    "rule-empty-line-before": "always",
+    "declaration-empty-line-before": "never",
+    "max-empty-lines": 1,
+    "block-no-empty": true,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["inside-block"]
+      }
+    ],
+    "selector-attribute-name-disallowed-list":["class", "id", "/^data-/"],
+    "selector-max-type":2,
+    "selector-type-case":"lower",
+    "property-case":"lower",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-else-closing-brace-space-after": "never-intermediate",
+    "scss/at-function-named-arguments": "never",
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-after": "never",
+    "scss/dollar-variable-first-in-block": [
+      true,
+      {
+        "ignore": ["comments", "imports"]
+      }
+    ],
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/double-slash-comment-empty-line-before": "always",
+    "scss/comment-no-empty": true
   }
 }

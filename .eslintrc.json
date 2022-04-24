@@ -9,11 +9,8 @@
         "ecmaVersion": 12,
         "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
-    },
-      "plugins": [
-        "@typescript-eslint/eslint-plugin",
-        "prettier"
-      ],
+      },
+      "plugins": ["@typescript-eslint/eslint-plugin", "prettier"],
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
@@ -40,15 +37,52 @@
             "style": "camelCase"
           }
         ],
-       
+
         // 0 == "off", 1 == "warn", 2 == "error"
-        "@typescript-eslint/member-ordering": 0, 
+        "max-lines":["error", 400],
+        "for-direction": 2,
+        "getter-return": 2,
+        "no-dupe-keys": 2,
+        "no-duplicate-imports": 2,
+        "no-dupe-else-if": 2,
+        "no-duplicate-case": 2,
+        "no-dupe-class-members": 2,
+        "no-constructor-return": 2,
+        "no-const-assign": 2,
+        "no-func-assign": 2,
+        "no-ex-assign": 2,
+        "use-isnan": 2,
+        "valid-typeof": 2,
+        "no-self-assign": 2,
+        "no-unreachable": 2,
+        "no-setter-return": 2,
+        "no-sparse-arrays": 2,
+        "no-import-assign": 2,
+        "no-this-before-super": 2,
+        "no-use-before-define": 2,
+        "block-scoped-var": 2,
+        "arrow-body-style": 2,
+        "consistent-return": 2,
+        "capitalized-comments": 2,
+        "default-case": 2,
+        "curly": 2,
+        "no-bitwise": 2,
+        "no-delete-var": 2,
+        "no-alert": 1,
+        "max-params":["error", 4],
+        "no-confusing-arrow": 2,
+        // no-else-return
+       // cập nhật tiếp trong tương lai ...
+
+        //new trên
+        "@typescript-eslint/member-ordering": 0,
         "@typescript-eslint/naming-convention": 0,
         "@typescript-eslint/interface-name-prefix": 0,
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-explicit-any": 0,
-        "prettier/prettier": [ // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
+        "prettier/prettier": [
+          // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
           "error",
           {
             "endOfLine": "auto"
@@ -68,7 +102,8 @@
       "excludedFiles": ["*inline-template-*.component.html"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
-        "prettier/prettier": [ // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
+        "prettier/prettier": [
+          // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
           "error",
           {
             "endOfLine": "auto"

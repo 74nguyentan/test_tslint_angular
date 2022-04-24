@@ -3,10 +3,16 @@
   height: 500px;
   width: 200px;
 
-  .box-d {
-    height: 200px;
+  .box-item {
+    $var: 100px;
+    height: 200px; /* commrn
+     test */
     background-color: red;
   }
 }
 
-/* ass */
+// comment .box-item
+
+[lang~='en-us'] {
+  color: rebeccapurple;
+}
