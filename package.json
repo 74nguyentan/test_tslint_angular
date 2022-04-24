@@ -68,14 +68,17 @@
   "lint-staged": {
     "*.ts": [
       "yarn lint",
-      "yarn format"
+      "yarn format",
+      "git add ."
     ],
     "*.scss": [
       "yarn stylelint",
-      "yarn format"
+      "yarn format",
+      "git add ."
     ],
     "*.html": [
-      "yarn format"
+      "yarn format",
+      "git add ."
     ]
   }
 }
