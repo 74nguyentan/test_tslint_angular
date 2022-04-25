@@ -39,7 +39,7 @@
         ],
 
         // 0 == "off", 1 == "warn", 2 == "error"
-        "max-lines":["error", 400],
+        "max-lines": ["error", 400],
         "for-direction": 2,
         "getter-return": 2,
         "no-dupe-keys": 2,
@@ -62,34 +62,33 @@
         "no-use-before-define": 2,
         "block-scoped-var": 2,
         "arrow-body-style": 2,
-        "consistent-return": 2,
         "capitalized-comments": 2,
         "default-case": 2,
         "curly": 2,
         "no-bitwise": 2,
         "no-delete-var": 2,
         "no-alert": 1,
-        "max-params":["error", 4],
+        "max-params": ["error", 7],
+        // "no-unused-vars": ["error", { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới, tắt rule này vì báo lỗi luôn cả khai báo service trong constructor
+        "semi": ["error", "always"],
         "no-confusing-arrow": 2,
-        // no-else-return
+         // no-else-return
        // cập nhật tiếp trong tương lai ...
-
-        //new trên
+        // Rule angular TS lint
         "@typescript-eslint/member-ordering": 0,
         "@typescript-eslint/naming-convention": 0,
         "@typescript-eslint/interface-name-prefix": 0,
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-explicit-any": 0,
+        // Rule prettier format
         "prettier/prettier": [
           // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
           "error",
           {
             "endOfLine": "auto"
           }
-        ],
-        // "no-unused-vars": [1, { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới
-        "semi": ["error", "always"] // thêm dấu ; cuối dòng code
+        ]
       }
     },
     {
