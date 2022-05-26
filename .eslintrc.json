@@ -37,9 +37,10 @@
             "style": "camelCase"
           }
         ],
+        "@angular-eslint/no-output-native":"off",
 
         // 0 == "off", 1 == "warn", 2 == "error"
-        "max-lines": ["error", 400],
+        "max-lines": ["error", 500],
         "for-direction": 2,
         "getter-return": 2,
         "no-dupe-keys": 2,
@@ -62,7 +63,8 @@
         "no-use-before-define": 2,
         "block-scoped-var": 2,
         "arrow-body-style": 2,
-        "capitalized-comments": 2,
+        "capitalized-comments": 0,
+        "no-inline-comments":1,
         "default-case": 2,
         "curly": 2,
         "no-bitwise": 2,
@@ -72,15 +74,24 @@
         // "no-unused-vars": ["error", { "vars": "all" }], // báo lỗi ĐỎ nếu có biến k dùng tới, tắt rule này vì báo lỗi luôn cả khai báo service trong constructor
         "semi": ["error", "always"],
         "no-confusing-arrow": 2,
-         // no-else-return
-       // cập nhật tiếp trong tương lai ...
-        // Rule angular TS lint
+        "no-console":1,
+        // Rule TS lint
         "@typescript-eslint/member-ordering": 0,
-        "@typescript-eslint/naming-convention": 0,
         "@typescript-eslint/interface-name-prefix": 0,
         "@typescript-eslint/explicit-function-return-type": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["variable", "function", "method"],
+            "format": ["camelCase"]
+          },
+          {
+            "selector": ["class"],
+            "format": ["PascalCase"]
+          }
+        ],
         // Rule prettier format
         "prettier/prettier": [
           // hủy cảnh báo "Delete `␍`eslintprettier/prettier"
