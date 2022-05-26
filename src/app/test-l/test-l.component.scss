@@ -5,10 +5,23 @@
 
   .box-item {
     $var: 100px;
-    height: 200px; /* commrn
-     test */
+
+    // ĐÚNG
+    height: 200px;
     background-color: red;
+
+    
+    Width: 100px;
+    COLOR: red;
   }
+}
+
+a {
+  @if $x == 1 {
+  } @else {
+    // ĐÚNG
+  }
+  width: 10px;
 }
 
 // comment .box-item
